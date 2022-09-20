@@ -11,34 +11,41 @@ body {
 main .productos {
     padding: 60px 15px;
     max-width: 1200px;
-    width: 1200px;
-    margin: auto
+    width: 100%;
+    margin: auto;
+    display: flex;
+    flex-direction: column;
+    gap: 270px;
 }
 
 main .productos .products {
     text-align: center;
     font-family: "Titan One", cursive;
-    letter-spacing: .04em
+    letter-spacing: .04em;
+    margin: auto;
+    width: 50%;
+
 }
 
 main .productos .products .products__titulo1 {
     color: #ffa5ba;
-    font-size: 2.41em
+    font-size: 2.14em
 }
 
 main .productos .products .products__titulo2 {
     color: #d41443;
-    font-size: 6em;
+    font-size: 4.14em;
     letter-spacing: .06em;
-    padding: 16px 0 275px 0
+
 }
 
 main .ice {
     align-items: center;
     display: flex;
     justify-content: space-between;
-    max-width: 368px;
-    gap: 32px
+    width: 100%;
+    gap: 32px;
+    margin: auto;
 }
 
 main .ice .ice__card {
@@ -47,16 +54,25 @@ main .ice .ice__card {
 }
 
 main .ice .ice__card .ice__card__text {
-    width: 241px;
+    max-width: 241px;
     margin: auto
 }
 
 main .ice .card {
-    border-radius: 24px
+    border-radius: 24px;
+    max-height: 600px;
 }
 
 main .ice .card img {
-    margin-top: -255px
+    transform: translateY(-255px);
+    width: 100%;
+}
+
+main .ice .card .ice__card__text,
+main .ice .card .card__puntos,
+main .ice .card img,
+main .ice .card .card__titulo {
+    transform: translateY(-255px);
 }
 
 main .ice .card .card__titulo {
@@ -123,39 +139,122 @@ main .ice .card__tres {
     background: #c2e297
 }
 
+@media screen and (max-width:425px) {
 
-@media screen and (max-width:320px) {
-
-    main .ice {
-        flex-direction: column;
+    main .ice .card .ice__card__text,
+    main .ice .card .card__puntos,
+    main .ice .card img,
+    main .ice .card .card__titulo {
+        transform: translateY(-200px);
     }
-
-    main .productos {
-        max-width: 320px;
+    main .ice .card{
+        max-height: 700px;
     }
 
     main .productos .products .products__titulo2 {
         font-size: 2.42em;
+
+    }
+
+    main .productos .products .products__titulo1 {
+        font-size: 2.42em;
+    }
+
+    main .productos .products {
+        width: 80%;
+
+    }
+
+    main .ice {
+        flex-direction: column;
+        width: 90%;
+        gap: 160px;
+
+    }
+
+
+    main .productos {
+        gap: 500px;
+    }
+
+
+}
+
+@media screen and (max-width:768px) {
+
+    main .ice .card .ice__card__text,
+    main .ice .card .card__puntos,
+    main .ice .card img,
+    main .ice .card .card__titulo {
+        transform: translateY(-155px);
+    }
+
+    main .productos {
+        gap: 160px;
+    }
+
+    main .ice .card img {
+        width: 100%;
+
+    }
+
+    main .ice .card {
+        width: 100%;
+
+    }
+
+
+    main .ice .card .ice__card__text {
+        font-size: 1em;
+        line-height: 176%;
+        letter-spacing: 0.04em;
+        width: 80%;
+    }
+
+}
+
+@media screen and (max-width:320px) {
+    main .productos {
+        gap: 0;
+    }
+
+    main .ice .card .card__titulo {
+        font-size: 1.42em;
+    }
+
+    main .ice {
+        flex-direction: column;
+        gap: 0;
+    }
+
+    main .productos .products {
+        width: 100%;
+    }
+
+
+    main .productos .products .products__titulo2 {
+        font-size: 2.42em;
+
     }
 
     .ice .card {
-        width: 280px;
+
         margin-top: 205px;
 
     }
 
     main .ice .card img {
-        width: 280px;
-        margin-top: -209px;
+        width: 100%;
+
 
     }
 
-    main .productos .products .products__titulo2 {
-        padding: 15px 61px 8px 59px;
-    }
+
 
     main .productos .products .products__titulo1 {
         font-size: 1.28em;
     }
+
+
 
 }
