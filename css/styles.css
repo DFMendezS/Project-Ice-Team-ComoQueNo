@@ -12,7 +12,6 @@
   --brand-font1: "Titan One";
   --brand-font2: "DM Sans";
 }
-
 * {
   font-family: var(--brand-font2);
   left: 0;
@@ -34,6 +33,7 @@ nav {
   align-items: center;
   text-size-adjust: 14px;
 }
+
 .logo {
   display: flex;
   position: relative;
