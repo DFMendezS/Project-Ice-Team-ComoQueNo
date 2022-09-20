@@ -12,6 +12,7 @@
   --brand-font1: "Titan One";
   --brand-font2: "DM Sans";
 }
+
 * {
   font-family: var(--brand-font2);
   left: 0;
